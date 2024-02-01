@@ -11,6 +11,7 @@ import Loginpage from './Pages/Loginpage';
 import SignupPage from './Pages/SignupPage';
 import Cart from './Pages/Cart';
 import CheckOut from './Pages/CheckOut';
+import ProductDetail from './Component/ProductDetail';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/contect' element={<Contect />} />
           <Route path='/ProductList' element={<ProductList />} />
+          <Route path='/productdetail/:id' element={<ProductDetail />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/checkout' element={<CheckOut />} />
           <Route path='/login' element={<Loginpage />} />

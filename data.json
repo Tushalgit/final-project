@@ -366,192 +366,170 @@
         "https://cdn.dummyjson.com/product-images/20/4.jpg",
         "https://cdn.dummyjson.com/product-images/20/thumbnail.jpg"
       ]
+    }
+  ],
+  "brands":[
+    {
+      "value": "Apple",
+      "label": "Apple",
+      "checked": false
     },
     {
-      "id": 21,
-      "title": "- Daal Masoor 500 grams",
-      "description": "Fine quality Branded Product Keep in a cool and dry place",
-      "price": 20,
-      "discountPercentage": 4.81,
-      "rating": 4.44,
-      "stock": 133,
-      "brand": "Saaf & Khaas",
-      "category": "groceries",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/21/thumbnail.png",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/21/1.png",
-        "https://cdn.dummyjson.com/product-images/21/2.jpg",
-        "https://cdn.dummyjson.com/product-images/21/3.jpg"
-      ]
+      "value": "Samsung",
+      "label": "Samsung",
+      "checked": false
     },
     {
-      "id": 22,
-      "title": "Elbow Macaroni - 400 gm",
-      "description": "Product details of Bake Parlor Big Elbow Macaroni - 400 gm",
-      "price": 14,
-      "discountPercentage": 15.58,
-      "rating": 4.57,
-      "stock": 146,
-      "brand": "Bake Parlor Big",
-      "category": "groceries",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/22/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/22/1.jpg",
-        "https://cdn.dummyjson.com/product-images/22/2.jpg",
-        "https://cdn.dummyjson.com/product-images/22/3.jpg"
-      ]
+      "value": "OPPOF19",
+      "label": "OPPOF19",
+      "checked": true
     },
     {
-      "id": 23,
-      "title": "Orange Essence Food Flavou",
-      "description": "Specifications of Orange Essence Food Flavour For Cakes and Baking Food Item",
-      "price": 14,
-      "discountPercentage": 8.04,
-      "rating": 4.85,
-      "stock": 26,
-      "brand": "Baking Food Items",
-      "category": "groceries",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/23/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/23/1.jpg",
-        "https://cdn.dummyjson.com/product-images/23/2.jpg",
-        "https://cdn.dummyjson.com/product-images/23/3.jpg",
-        "https://cdn.dummyjson.com/product-images/23/4.jpg",
-        "https://cdn.dummyjson.com/product-images/23/thumbnail.jpg"
-      ]
+      "value": "Huawei",
+      "label": "Huawei",
+      "checked": false
     },
     {
-      "id": 24,
-      "title": "cereals muesli fruit nuts",
-      "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
-      "price": 46,
-      "discountPercentage": 16.8,
-      "rating": 4.94,
-      "stock": 113,
-      "brand": "fauji",
-      "category": "groceries",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/24/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/24/1.jpg",
-        "https://cdn.dummyjson.com/product-images/24/2.jpg",
-        "https://cdn.dummyjson.com/product-images/24/3.jpg",
-        "https://cdn.dummyjson.com/product-images/24/4.jpg",
-        "https://cdn.dummyjson.com/product-images/24/thumbnail.jpg"
-      ]
+      "value": "Microsoft Surface",
+      "label": "Microsoft Surface",
+      "checked": false
     },
     {
-      "id": 25,
-      "title": "Gulab Powder 50 Gram",
-      "description": "Dry Rose Flower Powder Gulab Powder 50 Gram • Treats Wounds",
-      "price": 70,
-      "discountPercentage": 13.58,
-      "rating": 4.87,
-      "stock": 47,
-      "brand": "Dry Rose",
-      "category": "groceries",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/25/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/25/1.png",
-        "https://cdn.dummyjson.com/product-images/25/2.jpg",
-        "https://cdn.dummyjson.com/product-images/25/3.png",
-        "https://cdn.dummyjson.com/product-images/25/4.jpg",
-        "https://cdn.dummyjson.com/product-images/25/thumbnail.jpg"
-      ]
+      "value": "HP Pavilion",
+      "label": "HP Pavilion",
+      "checked": false
     },
     {
-      "id": 26,
-      "title": "Plant Hanger For Home",
-      "description": "Boho Decor Plant Hanger For Home Wall Decoration Macrame Wall Hanging Shelf",
-      "price": 41,
-      "discountPercentage": 17.86,
-      "rating": 4.08,
-      "stock": 131,
-      "brand": "Boho Decor",
-      "category": "home-decoration",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/26/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/26/1.jpg",
-        "https://cdn.dummyjson.com/product-images/26/2.jpg",
-        "https://cdn.dummyjson.com/product-images/26/3.jpg",
-        "https://cdn.dummyjson.com/product-images/26/4.jpg",
-        "https://cdn.dummyjson.com/product-images/26/5.jpg",
-        "https://cdn.dummyjson.com/product-images/26/thumbnail.jpg"
-      ]
+      "value": "Impression of Acqua Di Gio",
+      "label": "Impression of Acqua Di Gio",
+      "checked": false
     },
     {
-      "id": 27,
-      "title": "Flying Wooden Bird",
-      "description": "Package Include 6 Birds with Adhesive Tape Shape: 3D Shaped Wooden Birds Material: Wooden MDF, Laminated 3.5mm",
-      "price": 51,
-      "discountPercentage": 15.58,
-      "rating": 4.41,
-      "stock": 17,
-      "brand": "Flying Wooden",
-      "category": "home-decoration",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/27/thumbnail.webp",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/27/1.jpg",
-        "https://cdn.dummyjson.com/product-images/27/2.jpg",
-        "https://cdn.dummyjson.com/product-images/27/3.jpg",
-        "https://cdn.dummyjson.com/product-images/27/4.jpg",
-        "https://cdn.dummyjson.com/product-images/27/thumbnail.webp"
-      ]
+      "value": "Royal_Mirage",
+      "label": "Royal Mirage",
+      "checked": false
     },
     {
-      "id": 28,
-      "title": "3D Embellishment Art Lamp",
-      "description": "3D led lamp sticker Wall sticker 3d wall art light on/off button  cell operated (included)",
-      "price": 20,
-      "discountPercentage": 16.49,
-      "rating": 4.82,
-      "stock": 54,
-      "brand": "LED Lights",
-      "category": "home-decoration",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/28/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/28/1.jpg",
-        "https://cdn.dummyjson.com/product-images/28/2.jpg",
-        "https://cdn.dummyjson.com/product-images/28/3.png",
-        "https://cdn.dummyjson.com/product-images/28/4.jpg",
-        "https://cdn.dummyjson.com/product-images/28/thumbnail.jpg"
-      ]
+      "value": "Fog Scent Xpressio",
+      "label": "Fog Scent Xpressio",
+      "checked": false
     },
     {
-      "id": 29,
-      "title": "Handcraft Chinese style",
-      "description": "Handcraft Chinese style art luxury palace hotel villa mansion home decor ceramic vase with brass fruit plate",
-      "price": 60,
-      "discountPercentage": 15.34,
-      "rating": 4.44,
-      "stock": 7,
-      "brand": "luxury palace",
-      "category": "home-decoration",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/29/thumbnail.webp",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/29/1.jpg",
-        "https://cdn.dummyjson.com/product-images/29/2.jpg",
-        "https://cdn.dummyjson.com/product-images/29/3.webp",
-        "https://cdn.dummyjson.com/product-images/29/4.webp",
-        "https://cdn.dummyjson.com/product-images/29/thumbnail.webp"
-      ]
+      "value": "Al Munakh",
+      "label": "Al Munakh",
+      "checked": false
     },
     {
-      "id": 30,
-      "title": "Key Holder",
-      "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
-      "price": 30,
-      "discountPercentage": 2.92,
-      "rating": 4.92,
-      "stock": 54,
-      "brand": "Golden",
-      "category": "home-decoration",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/30/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/30/1.jpg",
-        "https://cdn.dummyjson.com/product-images/30/2.jpg",
-        "https://cdn.dummyjson.com/product-images/30/3.jpg",
-        "https://cdn.dummyjson.com/product-images/30/thumbnail.jpg"
-      ]
+      "value": "Lord - Al-Rehab",
+      "label": "Lord Al Rehab",
+      "checked": false
+    },
+    {
+      "value": "L'Oreal Paris",
+      "label": "L'Oreal Paris",
+      "checked": false
+    },
+    {
+      "value": "Hemani Tea",
+      "label": "Hemani Tea",
+      "checked": false
+    },
+    {
+      "value": "Dermive",
+      "label": "Dermive",
+      "checked": false
+    },
+    {
+      "value": "ROREC White Rice",
+      "label": "ROREC White Rice",
+      "checked": false
+    },
+    {
+      "value": "Fair & Clear",
+      "label": "Fair & Clear",
+      "checked": false
+    },
+    {
+      "value": "Saaf & Khaas",
+      "label": "Saaf & Khaas",
+      "checked": false
+    },
+    {
+      "value": "Bake Parlor Big",
+      "label": "Bake Parlor Big",
+      "checked": false
+    },
+    {
+      "value": "Baking Food Items",
+      "label": "Baking Food Items",
+      "checked": false
+    },
+    {
+      "value": "fauji",
+      "label": "fauji",
+      "checked": false
+    },
+    {
+      "value": "Dry Rose",
+      "label": "Dry Rose",
+      "checked": false
+    },
+    {
+      "value": "Boho Decor",
+      "label": "Boho Decor",
+      "checked": false
+    },
+    {
+      "value": "Flying Wooden",
+      "label": "Flying Wooden",
+      "checked": false
+    },
+    {
+      "value": "LED Lights",
+      "label": "LED Lights",
+      "checked": false
+    },
+    {
+      "value": "luxury palace",
+      "label": "luxury palace",
+      "checked": false
+    },
+    {
+      "value": "Golden",
+      "label": "Golden",
+      "checked": false
+    }
+  ],
+  "category":[
+    {
+      "value": "laptops",
+      "label": "laptops",
+      "checked": false
+    },
+    {
+      "value": "smartphones",
+      "label": "smart phones",
+      "checked": false
+    },
+    {
+      "value": "fragrances",
+      "label": "fragrances",
+      "checked": true
+    },
+    {
+      "value": "skincare",
+      "label": "skincare",
+      "checked": false
+    },
+    {
+      "value": "groceries",
+      "label": "groceries",
+      "checked": false
+    },
+    {
+      "value": "home-decoration",
+      "label": "home decoration",
+      "checked": false
     }
   ]
 }

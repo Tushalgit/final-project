@@ -4,64 +4,15 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
 import { ChevronLeftIcon, ChevronRightIcon, StarIcon } from '@heroicons/react/20/solid'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchAllProductsAsync, fetchProductsByFiltersAsync, selectAllProducts, selectTotalItems } from '../ProductSlice'
+import { fetchAllProductsAsync, fetchBrandAsync, fetchCategoryAsync, fetchProductsByFiltersAsync, selectAllProducts, selectBrand, selectCategory, selectTotalItems } from '../ProductSlice'
 import { ITEMS_PER_PAGE } from '../../../app/Constants'
+import { Link } from '@mui/material'
+import { NavLink } from 'react-router-dom'
 
 const sortOptions = [
   { name: 'Best Rating', sort: 'rating', order: 'desc', current: false },
   { name: 'Price: Low to High', sort: 'price', order: 'asc', current: false },
   { name: 'Price: High to Low', sort: 'price', order: 'desc', current: false },
-]
-
-const filters = [
-  {
-    id: 'category',
-    name: 'Category',
-    options: [
-      { value: 'laptops', label: 'laptops', checked: false },
-      { value: 'smartphones', label: 'smart phones', checked: false },
-      { value: 'fragrances', label: 'fragrances', checked: true },
-      { value: 'skincare', label: 'skincare', checked: false },
-      { value: 'groceries', label: 'groceries', checked: false },
-      { value: 'home-decoration', label: 'home decoration', checked: false },
-    ],
-  },
-  {
-    id: 'brand',
-    name: 'Brand',
-    options: [
-      { value: 'Apple', label: 'Apple', checked: false },
-      { value: 'Samsung', label: 'Samsung', checked: false },
-      { value: 'OPPOF19', label: 'OPPOF19', checked: true },
-      { value: 'Huawei', label: 'Huawei', checked: false },
-      { value: 'Microsoft Surface', label: 'Microsoft Surface', checked: false },
-      { value: 'HP Pavilion', label: 'HP Pavilion', checked: false },
-      { value: 'Impression of Acqua Di Gio', label: 'Impression of Acqua Di Gio', checked: false },
-      { value: 'Royal_Mirage', label: 'Royal Mirage', checked: false },
-      { value: 'Fog Scent Xpressio', label: 'Fog Scent Xpressio', checked: false },
-      { value: 'Al Munakh', label: 'Al Munakh', checked: false },
-      { value: 'Lord - Al-Rehab', label: 'Lord Al Rehab', checked: false },
-      { value: "L'Oreal Paris", label: "L'Oreal Paris", checked: false },
-      { value: 'Hemani Tea', label: 'Hemani Tea', checked: false },
-      { value: 'Dermive', label: 'Dermive', checked: false },
-      { value: 'ROREC White Rice', label: 'ROREC White Rice', checked: false },
-      { value: 'Fair & Clear', label: 'Fair & Clear', checked: false },
-      { value: 'Saaf & Khaas', label: 'Saaf & Khaas', checked: false },
-      { value: 'Bake Parlor Big', label: 'Bake Parlor Big', checked: false },
-      { value: 'Baking Food Items', label: 'Baking Food Items', checked: false },
-      { value: 'fauji', label: 'fauji', checked: false },
-      { value: 'Dry Rose', label: 'Dry Rose', checked: false },
-      { value: 'Boho Decor', label: 'Boho Decor', checked: false },
-      { value: 'Flying Wooden', label: 'Flying Wooden', checked: false },
-      { value: 'LED Lights', label: 'LED Lights', checked: false },
-      { value: 'luxury palace', label: 'luxury palace', checked: false },
-      { value: 'Golden', label: 'Golden', checked: false },
-
-
-    ],
-  },
-
-
 ]
 
 function classNames(...classes) {
@@ -75,7 +26,22 @@ export default function ProductList() {
 
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
   const products = useSelector(selectAllProducts)
-  const totalItems=useSelector(selectTotalItems)
+  const brands = useSelector(selectBrand)
+  const category = useSelector(selectCategory)
+  const totalItems = useSelector(selectTotalItems)
+
+  const filters = [
+    {
+      id: 'category',
+      name: 'Category',
+      options: category
+    },
+    {
+      id: 'brand',
+      name: 'Brand',
+      options: brands
+    },
+  ]
 
   // filter
   const [filter, setFilter] = useState({})
@@ -100,27 +66,40 @@ export default function ProductList() {
     setFilter(newFilter)
   }
 
-  const handleSort = (option) => {
-    const sort = { _sort: option.sort, _order: option.order }
-    setSort(sort)
-  }
+  // const handleSort = (option) => {
+  //   const sort = { _sort: option.sort, _order: option.order }
+  //   setSort(sort)
+  // }
 
-  const handlePage = (page) => {
-    setPage(page)
-  }
+  // const handlePage = (page) => {
+  //   setPage(page)
+  // }
 
-  useEffect(() => {
-    const pagination = { _page: page,_limit: ITEMS_PER_PAGE }
-    dispatch(fetchProductsByFiltersAsync({ filter, sort, pagination }))
-  }, [dispatch, filter, sort, page])
+  // useEffect(() => {
+  //   // const pagination = { _page: page, _limit: ITEMS_PER_PAGE }
+  //   dispatch(fetchProductsByFiltersAsync({ filter, sort }))
+  //   // dispatch(fetchProductsByFiltersAsync({ filter, sort, pagination }))
+  // }, [dispatch, filter, sort, page])
 
+  // useEffect(() => {
+  //   setPage(1)
+  // }, [totalItems, sort])
+
+  // useEffect(() => {
+  //   dispatch(fetchBrandAsync())
+  //   dispatch(fetchCategoryAsync())
+  // })
+
+  useEffect(()=>{
+    dispatch(fetchAllProductsAsync())
+  },[])
 
   return (
 
     <div className="bg-white">
       <div>
         {/* Mobile filter dialog */}
-        <MobileFilter handleFilter={handleFilter} mobileFiltersOpen={mobileFiltersOpen} setMobileFiltersOpen={setMobileFiltersOpen} />
+        <MobileFilter handleFilter={handleFilter} mobileFiltersOpen={mobileFiltersOpen} setMobileFiltersOpen={setMobileFiltersOpen} filters={filters} />
 
         <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-12">
@@ -153,7 +132,7 @@ export default function ProductList() {
                         <Menu.Item key={option.name}>
                           {({ active }) => (
                             <p
-                              onClick={e => handleSort(option)}
+                              // onClick={e => handleSort(option)}
                               className={classNames(
                                 option.current ? 'font-medium text-gray-900' : 'text-gray-500',
                                 active ? 'bg-gray-100' : '',
@@ -192,7 +171,7 @@ export default function ProductList() {
 
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
               {/* Filters */}
-              <DesktopFilter handleFilter={handleFilter} />
+              <DesktopFilter handleFilter={handleFilter} filters={filters} />
 
 
               {/* Product grid */}
@@ -205,7 +184,8 @@ export default function ProductList() {
 
           {/* pagination */}
 
-          <PaginationBottom page={page} setPage={setPage} handlePage={handlePage} totalItems={totalItems}/>
+          <PaginationBottom page={page} setPage={setPage} totalItems={totalItems} />
+          {/* <PaginationBottom page={page} setPage={setPage} handlePage={handlePage} totalItems={totalItems} /> */}
 
         </main>
       </div>
@@ -214,7 +194,7 @@ export default function ProductList() {
 }
 
 
-function MobileFilter({ handleFilter, mobileFiltersOpen, setMobileFiltersOpen }) {
+function MobileFilter({ handleFilter, mobileFiltersOpen, setMobileFiltersOpen, filters }) {
 
   return (
     <Transition.Root show={mobileFiltersOpen} as={Fragment}>
@@ -310,7 +290,7 @@ function MobileFilter({ handleFilter, mobileFiltersOpen, setMobileFiltersOpen })
   )
 }
 
-function DesktopFilter({ handleFilter }) {
+function DesktopFilter({ handleFilter, filters }) {
   return (
     <form className="hidden lg:block">
       <h3 className="sr-only">Categories</h3>
@@ -369,13 +349,13 @@ function ProductGrid({ products }) {
       <div className="mx-auto max-w-2xl lg:max-w-7xl lg:px-8">
 
         <div className="mt-6 grid grid-cols-1 gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-6">
-          {products.map((product) => (
-            <div key={product.id} className="group relative border border-gray-300 p-2 rounded-md ">
-              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-72">
+          {products?.map((product) => (
+            <NavLink to={`/productdetail/${product.id}`} key={product.id}> <div  className="group relative border border-gray-300 p-2 rounded-md hover:cursor-pointer ">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-72 ">
                 <img
                   src={product.thumbnail}
                   alt={product.title}
-                  className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                  className="h-full w-full object-cover object-center lg:h-full lg:w-full cursor-pointer"
                 />
               </div>
               <div className="mt-4 flex justify-between">
@@ -402,6 +382,7 @@ function ProductGrid({ products }) {
 
               </div>
             </div>
+            </NavLink>
           ))}
         </div>
       </div>
@@ -442,7 +423,7 @@ function PaginationBottom({ handlePage, page, setPage, totalItems }) {
 
             {Array.from({ length: Math.ceil(totalItems / ITEMS_PER_PAGE) }).map((el, index) => (
               <div
-                 key={index}
+                key={index}
                 onClick={e => handlePage(index + 1)}
                 aria-current="page"
                 className={`relative z-10  cursor-pointer inline-flex items-center 
